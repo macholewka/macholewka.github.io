@@ -14,7 +14,7 @@ function registerServiceWorker() {
           if (subscription) {
             return subscription;
           }
-          const response = await fetch("/vapidPublicKey");
+          const response = await fetch(`http://${server}/vapidPublicKey`);
           const vapidPublicKey = await response.text();
           const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
           registration.pushManager.subscribe({
@@ -24,7 +24,7 @@ function registerServiceWorker() {
         });
     })
     .then((subscription) => {
-      fetch("/register", {
+      fetch(`http://${server}/register`, {
         method: "post",
         headers: {
           "Content-type": "application/json",
@@ -39,7 +39,7 @@ function registerServiceWorker() {
         const delay = 10
         const ttl = 20
 
-        fetch("/sendNotification", {
+        fetch(`http://${server}/sendNotification`, {
           method: "post",
           headers: {
             "Content-type": "application/json",
