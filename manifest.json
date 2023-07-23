@@ -1,0 +1,15 @@
+{
+    "short_name": "PrivatePush",
+    "name": "PrivatePushNotifications",
+    "icons": [
+    {
+      "src":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Icon-push-object-3194184.svg/1024px-Icon-push-object-3194184.svg.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+   ],
+   "start_url": "/",
+   "background_color": "#3367D6",
+   "theme_color": "#3367D6",
+   "display": "standalone"
+  }
