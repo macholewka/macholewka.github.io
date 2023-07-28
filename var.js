@@ -1,1 +1,1 @@
-const server = 'http://104.248.134.160'
+const server = 'https://macholewka.pl'
